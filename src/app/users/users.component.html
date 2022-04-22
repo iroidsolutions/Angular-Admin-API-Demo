@@ -1,0 +1,59 @@
+<!-- <app-footer></app-footer>  -->
+<app-admin-header></app-admin-header>
+<app-admin-menu></app-admin-menu>
+<head>
+   <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<section id="main-content">
+    <section class="wrapper">
+
+      <!-- <h3><a href="dashboard.php?group_id=<?= base64_encode($group_id) ?>" style="color: #5D5D5D;"><i class="fa fa-angle-left"></i>    Back</a></h3> -->
+
+        <div class="row mt">
+
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                <div class="content-panel">
+
+                    <div class="col-md-12" style="margin-bottom: 10px;padding:0">
+                  
+                          <h2 style="margin-bottom: 10px;" class="dashboard_fundraiser text-center">Users</h2>
+                          <button routerLink="/addUser" class="btn btn-default">Add User</button>
+                               
+                    </div>
+
+                    <section id="unseen" style="padding-bottom: 10px;">
+
+                        <table id="DataTable" class="table table-bordered table-striped table-condensed" style="border:1px solid #ccc;overflow-x: scroll; overflow-y: scroll; width: 100%;font-size: 15px;">
+                          <tr>
+                            <td>First Name</td>
+                            <td>Last Name</td>
+                            <td>Email</td>
+                            <td>Phone</td>
+                            <td>Timezone</td>
+                            <td>Action</td>
+                          </tr>
+                          <tr *ngFor="let hero of heroes" id={{hero.user_id}}>
+                            <td>{{hero.first_name}}</td>
+                            <td>{{hero.last_name}}</td>
+                            <td>{{hero.email_id}}</td>
+                            <td>{{hero.phone}}</td>
+                            <td>{{hero.time_zone}}</td>
+                            <td>
+                              <button routerLink="/editUser/{{hero.user_id}}" class="btn btn-default">Edit</button>
+                              <button (click)=delete_user(hero.user_id) class="btn btn-default">Delete</button>
+                            </td>
+                          </tr>
+                        </table>
+
+                    
+                    </section>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>

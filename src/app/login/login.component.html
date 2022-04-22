@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Angular Demo</title>
+        <link href="../assets/css/bootstrap.css" rel="stylesheet">
+        <!-- <link href="../assets/font-awesome/css/font-awesome.css" rel="stylesheet" /> -->
+        <link href="../assets/css/style.css" rel="stylesheet">
+        <link href="../assets/css/style-responsive.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="../assets/css/sweetalert.css">
+    </head>
+    <body>
+    	   <div id="login-page">
+            <div class="container">
+                <div class="col-md-12 col-sm-12 col-xs-12 text-center app_title" style="font-size: 50px">Angular Demo</div>
+
+                <form #loginForm="ngForm" (ngSubmit)="doLogin(loginForm.value)" class="form-login" style="border-radius: 10px !important;">     
+				   <div class="image text-center" style="background-color:;border-top-left-radius: 5px; border-top-right-radius: 5px;height:30px;">
+                	  <img src="../assets/img/app_icon.png" height="100" style="margin-top: -51px;">
+                	</div>
+                    <input type="hidden" name="action" value="login_admin">
+                    <h2 class="form-login-heading" style="background:#fff;">sign in now</h2>
+                    <div class="login-wrap">
+                        <input class="form-control" name="email" [(ngModel)]="email">
+                        <br>
+                        <input class="form-control" name="password" [(ngModel)]="password" type="password">
+                        <a style="cursor: pointer;float: right;" data-toggle="modal" data-target="#myMapModal">Forgot Password?</a>
+                        <label class="checkbox"> </label>
+                       <button type="submit" id="submit">Submit</button>
+                    </div>
+
+				</form>
+            </div>
+        </div>
+
+        <div class="loader">
+          <!--  <center>
+              <img class="loading-image" src="<= SITE_URL_REMOTE . "/admin/assets/img/admin_img/loader.gif" ?>" alt="loading..">
+           </center> -->
+        </div>
+    </body>
+</html>
+
+<router-outlet></router-outlet>
+
+
+<script src="../assets/js/jquery.js"></script>
+<script src="../assets/js/bootstrap.min.js"></script>
+<script src="../assets/js/sweetalert.min.js"></script>

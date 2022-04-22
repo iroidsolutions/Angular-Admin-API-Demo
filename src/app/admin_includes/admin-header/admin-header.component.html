@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Angular-header</title>
+        <link href="../assets/css/bootstrap.css" rel="stylesheet">
+        <!-- <link href="../assets/font-awesome/css/font-awesome.css" rel="stylesheet" /> -->
+        <link href="../assets/css/style.css" rel="stylesheet">
+        <link href="../assets/css/style-responsive.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="../assets/css/sweetalert.css">
+    </head>
+    <body>
+
+         <header class="header">
+               
+                <a href="#" class="logo"><b style="text-transform: initial;"><i class="fa fa-bars" style="color:#00b0f1"></i></b></a>
+                <div class="top-menu">
+                    <ul class="nav" style="float: left">
+                       <a class="div_9" style="margin-left: 100px;float: left; margin-top: 6px !important;position:absolute;display: none">
+                        <!-- <img class="l_arror1" style="margin-left: 200px;" src="<?= SITE_URL_REMOTE . "/admin/assets/img/admin_img/l_arror.png"?>" /> -->
+                        </a>
+                    </ul>
+                    <ul class="nav pull-right top-menu">
+                        <button type="button" class="btn header_btn btn-default" (click)=logout()>
+                          <span>Logout</span>
+                        </button>
+                    </ul>
+                </div>
+            </header>
+    </body>
+</html>

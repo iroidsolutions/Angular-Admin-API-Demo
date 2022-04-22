@@ -1,0 +1,19 @@
+.sidebar{
+	background-color: #022e95;
+	height: 100% !important;
+	position: absolute !important;
+}
+.sidebar li{
+	padding: 10px 0px;
+	font-size: 18px;
+	color:#fff;
+}
+
+.sidebar .app_icon{
+	text-align: center !important;
+	margin: 10% 0;
+}
+
+.sidebar img{	
+    border-radius: 50%;
+}
